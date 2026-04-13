@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience — Shessvy Kelly</title>
+  <meta name="description" content="Full career history of Shessvy Kelly — Senior Solution Engineer, Solutions Architect, sales leader, web developer, and Marine Corps veteran." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Experience page specific overrides */
+    .exp-page-hero {
+      padding: 8rem 0 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .exp-page-hero h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .exp-page-hero p {
+      color: var(--text-muted);
+      max-width: 540px;
+      font-size: 1rem;
+    }
+
+    .exp-full-section {
+      padding: 4rem 0;
+    }
+
+    .exp-group {
+      margin-bottom: 4rem;
+    }
+
+    .exp-group-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .exp-full-item {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 2.5rem;
+      padding: 2.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .exp-full-item:last-child {
+      border-bottom: none;
+    }
+
+    .exp-full-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      padding-top: 0.1rem;
+    }
+
+    .exp-full-period {
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      font-weight: 500;
+    }
+
+    .exp-full-company {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .exp-full-type {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .exp-full-location {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      margin-top: 0.15rem;
+    }
+
+    .exp-full-body {}
+
+    .exp-full-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .exp-full-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+
+    .exp-full-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+    }
+
+    .exp-full-skill {
+      font-size: 0.68rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      letter-spacing: 0.03em;
+      background: var(--bg-card);
+    }
+
+    .exp-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-bottom: 1rem;
+    }
+
+    .exp-highlight {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding-left: 1rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .exp-highlight::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.7rem;
+      top: 0.05rem;
+    }
+
+    /* Education & Certs section */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .edu-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .edu-card-school {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .edu-card-degree {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+      line-height: 1.4;
+    }
+
+    .edu-card-date {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+    }
+
+    .section-title {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: var(--white);
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .exp-full-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .exp-full-meta {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">SK</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#strengths">Strengths</a></li>
+      <li><a href="experience.html" style="color: var(--accent);">Experience</a></li>
+      <li><a href="index.html#pov">POV</a></li>
+      <li><a href="index.html#writing">Writing</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="exp-page-hero">
+    <div class="container">
+      <p class="section-label">Career History</p>
+      <h1>25+ years of range.<br>One consistent thread.</h1>
+      <p>From the Marine Corps to Verizon to Liquid Web to Optimizely to Amplitude — every role added something. The thread connecting all of it: understanding complex systems and helping people make sense of them.</p>
+    </div>
+  </div>
+
+  <!-- FULL EXPERIENCE -->
+  <div class="exp-full-section">
+    <div class="container">
+
+      <!-- CURRENT -->
+      <div class="exp-group">
+        <p class="exp-group-label">Current</p>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Jan 2025 — Present</span>
+            <span class="exp-full-company">Amplitude</span>
+            <span class="exp-full-type">Full-time</span>
+            <span class="exp-full-location">Katy, TX · Remote</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Senior Solution Engineer</h3>
+            <p class="exp-full-desc">
+              Working at the enterprise pre-sales layer of Amplitude's product analytics and experimentation platform.
+              Running technical discovery, designing and delivering demo narratives, and connecting platform capabilities
+              to measurable business outcomes for buyers across industries.
+            </p>
+            <div class="exp-highlights">
+              <span class="exp-highlight">Led high-stakes technical evaluations with enterprise buyers and executive stakeholders</span>
+              <span class="exp-highlight">Built demo stories grounded in buyer reality — not product feature tours</span>
+              <span class="exp-highlight">Supported partner and GTM enablement programs at scale</span>
+              <span class="exp-highlight">Bridged instrumentation strategy, behavioral analytics, and business decision-making</span>
+            </div>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">Product Analysis</span>
+              <span class="exp-full-skill">Data Analysis</span>
+              <span class="exp-full-skill">Web &amp; Feature Experimentation</span>
+              <span class="exp-full-skill">Product Demonstration</span>
+              <span class="exp-full-skill">Technical Enablement</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPTIMIZELY -->
+      <div class="exp-group">
+        <p class="exp-group-label">Optimizely · Full-time · 3 yrs 5 mos</p>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Nov 2023 — Nov 2024</span>
+            <span class="exp-full-company">Optimizely</span>
+            <span class="exp-full-type">Senior Solutions Architect</span>
+            <span class="exp-full-location">Katy, TX · Remote</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Senior Solutions Architect</h3>
+            <p class="exp-full-desc">
+              Led technical solution work across Optimizely's experimentation and digital experience platform —
+              from discovery through proof-of-concept to partner readiness. Operated at the intersection of
+              sales, technology, and strategy. Deep customer discovery to align solutions with business goals,
+              technical requirements, and real-world challenges.
+            </p>
+            <div class="exp-highlights">
+              <span class="exp-highlight">Planned and executed the Opticon Demo Lounge 2022/2023/2024 — 10 demo booths, record-breaking engagement and lead generation</span>
+              <span class="exp-highlight">Designed and delivered partner enablement programs for a global ecosystem</span>
+              <span class="exp-highlight">Ran technical POCs and architecture reviews with complex enterprise accounts</span>
+              <span class="exp-highlight">Led RFP/RFI processes, translating technical capabilities into competitive strategic advantages</span>
+              <span class="exp-highlight">Answered complex integration, API, security, and scalability questions in high-stakes evaluations</span>
+            </div>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">TypeScript</span>
+              <span class="exp-full-skill">Git</span>
+              <span class="exp-full-skill">Svelte</span>
+              <span class="exp-full-skill">Sales Engineering</span>
+              <span class="exp-full-skill">Artificial Intelligence (AI)</span>
+              <span class="exp-full-skill">Presales</span>
+              <span class="exp-full-skill">RAG</span>
+              <span class="exp-full-skill">DXP</span>
+              <span class="exp-full-skill">C++</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Mar 2023 — Oct 2024</span>
+            <span class="exp-full-company">Optimizely</span>
+            <span class="exp-full-type">Solutions Architect II</span>
+            <span class="exp-full-location">Katy, TX · Remote</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Solutions Architect II</h3>
+            <p class="exp-full-desc">
+              Designed, developed, and implemented solutions for clients leveraging Optimizely's platform.
+              Worked closely with clients to understand business requirements and translate them into technical
+              solutions aligned with their goals. Strong focus on web technologies, A/B testing, personalization,
+              and optimization.
+            </p>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">TypeScript</span>
+              <span class="exp-full-skill">Sales Management</span>
+              <span class="exp-full-skill">Sales Operations</span>
+              <span class="exp-full-skill">Git</span>
+              <span class="exp-full-skill">Training</span>
+              <span class="exp-full-skill">Team Leadership</span>
+              <span class="exp-full-skill">Web Development</span>
+              <span class="exp-full-skill">Strategic Partnerships</span>
+              <span class="exp-full-skill">AI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Jul 2021 — Mar 2023</span>
+            <span class="exp-full-company">Optimizely</span>
+            <span class="exp-full-type">Solutions Architect</span>
+            <span class="exp-full-location">San Antonio, TX</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Solutions Architect</h3>
+            <p class="exp-full-desc">
+              Entry point into the Optimizely SA organization. Built the foundational technical credibility
+              and customer-facing skills that led to promotion to SA II and then Senior SA.
+            </p>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">TypeScript</span>
+              <span class="exp-full-skill">Web Applications</span>
+              <span class="exp-full-skill">SaaS</span>
+              <span class="exp-full-skill">Sales Engineering</span>
+              <span class="exp-full-skill">Product Demonstration</span>
+              <span class="exp-full-skill">Presales</span>
+              <span class="exp-full-skill">Web Development</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WEB / FREELANCE -->
+      <div class="exp-group">
+        <p class="exp-group-label">Freelance &amp; Digital</p>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Jul 2020 — Sep 2023</span>
+            <span class="exp-full-company">Sons of Liberty Gun Works</span>
+            <span class="exp-full-type">Freelance</span>
+            <span class="exp-full-location">San Antonio, TX</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Lead Web Developer</h3>
+            <p class="exp-full-desc">
+              Sole technical owner of all digital properties. Handled integration, content creation, implementation,
+              eCommerce systems, and ongoing maintenance for the SOLGW web presence.
+            </p>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">Back-End Web Development</span>
+              <span class="exp-full-skill">WooCommerce</span>
+              <span class="exp-full-skill">WordPress</span>
+              <span class="exp-full-skill">Graphic Design</span>
+              <span class="exp-full-skill">Web Development</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Feb 2020 — Jul 2021</span>
+            <span class="exp-full-company">SummerGlen Creative</span>
+            <span class="exp-full-type">Full-time</span>
+            <span class="exp-full-location">San Antonio, TX</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Web Site Development: Sales Engineer</h3>
+            <p class="exp-full-desc">
+              Scoped and led development projects across client engagements. Maintained working knowledge
+              of HTML, CSS, JavaScript, and cloud hosting infrastructure to communicate effectively with customers.
+              Deep understanding of competitive differences across platforms — WordPress, Shopify, Wix, Webflow,
+              BigCommerce, Magento — to match the right platform to each client's needs.
+            </p>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">HTML/CSS/JS</span>
+              <span class="exp-full-skill">Sales Engineering</span>
+              <span class="exp-full-skill">Technical Requirements</span>
+              <span class="exp-full-skill">Cloud Hosting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIQUID WEB -->
+      <div class="exp-group">
+        <p class="exp-group-label">Liquid Web · 3 yrs 2 mos</p>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Nov 2019 — Feb 2020</span>
+            <span class="exp-full-company">Liquid Web</span>
+            <span class="exp-full-type">Application Specialist</span>
+            <span class="exp-full-location">San Antonio Metro</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Application Specialist — Nexcess</h3>
+            <p class="exp-full-desc">
+              WordPress and Magento Solutions Engineer at Nexcess, a Liquid Web company.
+            </p>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">Sales Engineering</span>
+              <span class="exp-full-skill">Product Demonstration</span>
+              <span class="exp-full-skill">Presales</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Feb 2019 — Feb 2020</span>
+            <span class="exp-full-company">Liquid Web</span>
+            <span class="exp-full-type">Application Specialist</span>
+            <span class="exp-full-location">San Antonio, TX</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Application Specialist — WordPress Managed</h3>
+            <p class="exp-full-desc">
+              Supported the entire sales organization with technical knowledge around WordPress and Magento solutions.
+              Cross-functional leader in building sales programs. Co-authored the sales enablement plan for the sales
+              teams. Communications liaison between Sales, Marketing, Support, and Product.
+            </p>
+            <div class="exp-highlights">
+              <span class="exp-highlight">Created, maintained, and performed technical demos of WordPress solutions</span>
+              <span class="exp-highlight">Provided coaching and professional development to sales associates</span>
+              <span class="exp-highlight">Met assigned targets for profitable sales growth in Managed WordPress product line</span>
+            </div>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">WordPress</span>
+              <span class="exp-full-skill">Sales Enablement</span>
+              <span class="exp-full-skill">Product Demonstration</span>
+              <span class="exp-full-skill">Team Coaching</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Nov 2017 — Mar 2019</span>
+            <span class="exp-full-company">Liquid Web</span>
+            <span class="exp-full-type">Full-time</span>
+            <span class="exp-full-location">San Antonio, TX</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Sales Enablement Manager</h3>
+            <p class="exp-full-desc">
+              Created the Sales Process for Inbound and Outbound Sales efforts — built for sustainability and
+              designed to increase revenue with clear actions and plans. Maintained alignment between Sales and
+              Marketing through weekly Sales Enablement meetings. Identified issues and created solutions to bridge
+              gaps between all departments.
+            </p>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">Sales Process Design</span>
+              <span class="exp-full-skill">Cross-functional Leadership</span>
+              <span class="exp-full-skill">Sales &amp; Marketing Alignment</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Mar 2017 — Feb 2019</span>
+            <span class="exp-full-company">Liquid Web</span>
+            <span class="exp-full-type">Full-time</span>
+            <span class="exp-full-location">San Antonio, TX</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">WordPress Solutions Architect</h3>
+            <p class="exp-full-desc">
+              Certified W3C Developer. Helped developers find the right hosting infrastructure for WordPress
+              builds on Liquid Web's Managed WordPress and WooCommerce platforms.
+            </p>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">HTML5/CSS/JS</span>
+              <span class="exp-full-skill">PHP</span>
+              <span class="exp-full-skill">MySQL</span>
+              <span class="exp-full-skill">WordPress</span>
+              <span class="exp-full-skill">WooCommerce</span>
+              <span class="exp-full-skill">W3C Certified</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Jan 2017 — Nov 2017</span>
+            <span class="exp-full-company">Liquid Web</span>
+            <span class="exp-full-type">Full-time</span>
+            <span class="exp-full-location">San Antonio, TX</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Account Executive</h3>
+            <p class="exp-full-desc">
+              Acquired new customers from named prospect sets. Led the full sales process while coordinating
+              company technical resources for solution development and implementation. Managed new customer
+              onboarding and expectation setting through implementation.
+            </p>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">Sales</span>
+              <span class="exp-full-skill">IT Infrastructure</span>
+              <span class="exp-full-skill">Account Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CYNCH / PEER1 / MARKETSTAR -->
+      <div class="exp-group">
+        <p class="exp-group-label">Leadership &amp; Channel Roles</p>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Jul 2015 — Jan 2017</span>
+            <span class="exp-full-company">Cynch Inc.</span>
+            <span class="exp-full-type">Full-time</span>
+            <span class="exp-full-location">San Antonio, TX</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Vice President &amp; Director of Channel Sales and Partnerships</h3>
+            <p class="exp-full-desc">
+              Redefined the company's GTM business model, transitioning from a break/fix model to managed services —
+              implementing Migration as a Service as a new offering, driving a 38% revenue increase year over year.
+              Led full sales org design, strategic planning, forecasting, and resource deployment.
+            </p>
+            <div class="exp-highlights">
+              <span class="exp-highlight">38% YoY revenue increase from GTM model transformation</span>
+              <span class="exp-highlight">Aligned sales org objectives with corporate strategy through planning, forecasting, and budgeting</span>
+              <span class="exp-highlight">Led learning &amp; development initiatives — oversaw delivery, assessed ROI, monitored outcomes</span>
+              <span class="exp-highlight">Established and governed the sales performance management system</span>
+            </div>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">Channel Partners</span>
+              <span class="exp-full-skill">Sales Management</span>
+              <span class="exp-full-skill">GTM Strategy</span>
+              <span class="exp-full-skill">Managed Services</span>
+              <span class="exp-full-skill">SaaS</span>
+              <span class="exp-full-skill">Strategic Partnerships</span>
+              <span class="exp-full-skill">React.js</span>
+              <span class="exp-full-skill">B2B</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Sep 2014 — Jul 2015</span>
+            <span class="exp-full-company">PEER 1 Hosting</span>
+            <span class="exp-full-type">Full-time</span>
+            <span class="exp-full-location">United States</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Channel Executive — USA &amp; LATAM</h3>
+            <p class="exp-full-desc">
+              Helped MSPs, IT shops, web designers, application and software companies, and developers
+              expand their offering portfolio through the right hosting infrastructure. Deep understanding
+              of compliance frameworks (HIPAA, PCI) and cloud infrastructure to match environments to client needs.
+            </p>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">Channel Partners</span>
+              <span class="exp-full-skill">Cloud Computing</span>
+              <span class="exp-full-skill">Strategic Partnerships</span>
+              <span class="exp-full-skill">Application Development</span>
+              <span class="exp-full-skill">HIPAA / PCI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Jun 2012 — Aug 2014</span>
+            <span class="exp-full-company">MarketStar</span>
+            <span class="exp-full-type">Full-time</span>
+            <span class="exp-full-location">Ogden, UT</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Channel Sales Manager</h3>
+            <p class="exp-full-desc">
+              Led a team of Territory Account Managers through strong business relationships, ongoing
+              sales training, and weekly pipeline calls. Completed the MarketStar Leadership in Training
+              program — a year-long course covering leadership foundations, trust, crucial conversations,
+              knowledge-based relationship building, and coaching for performance.
+            </p>
+            <div class="exp-highlights">
+              <span class="exp-highlight">Developed and operationalized the Peer2Peer QA program across 3,500+ employees — drove measurable conversion rate and revenue improvement</span>
+              <span class="exp-highlight">Completed MarketStar Leadership in Training Program (2013)</span>
+            </div>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">Sales Management</span>
+              <span class="exp-full-skill">Sales Operations</span>
+              <span class="exp-full-skill">Team Leadership</span>
+              <span class="exp-full-skill">Training</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VERIZON & EARLIER -->
+      <div class="exp-group">
+        <p class="exp-group-label">Earlier Career</p>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Dec 2010 — Jun 2012</span>
+            <span class="exp-full-company">—</span>
+            <span class="exp-full-type">Sabbatical</span>
+            <span class="exp-full-location">Riverside, CA</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Baby Bonding — Intentional Sabbatical</h3>
+            <p class="exp-full-desc">
+              Took 19 months to be present with his daughter. His take: emotional support is the foundation
+              of everything — in parenting and in professional life. The people around you who care about
+              your success make it easier to reach your goals. That belief shows up in every team he works with.
+            </p>
+          </div>
+        </div>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Jun 2001 — Apr 2010</span>
+            <span class="exp-full-company">Verizon Wireless</span>
+            <span class="exp-full-type">Full-time · 8 yrs 11 mos</span>
+            <span class="exp-full-location">Southern California</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Channel Product Manager — Data Sales</h3>
+            <p class="exp-full-desc">
+              Subject Matter Expert in Data Sales and single point of contact for 18 Indirect Account Managers
+              and 3 District Managers. Implemented and monitored regional sales incentive programs to drive
+              Channel/Indirect Retailer productivity against KPIs.
+            </p>
+            <div class="exp-highlights">
+              <span class="exp-highlight">Developed and maintained reporting that tracked sales program success and identified opportunity areas</span>
+              <span class="exp-highlight">Proactively communicated findings to upper leadership</span>
+              <span class="exp-highlight">Selected for Verizon Wireless Leadership Expo — top 10% of leadership nationally (2010)</span>
+            </div>
+            <div class="exp-full-skills">
+              <span class="exp-full-skill">Channel Sales</span>
+              <span class="exp-full-skill">Sales Programs</span>
+              <span class="exp-full-skill">Reporting &amp; Analysis</span>
+              <span class="exp-full-skill">Product Demonstration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-full-item fade-up">
+          <div class="exp-full-meta">
+            <span class="exp-full-period">Jan 1995 — Oct 1997</span>
+            <span class="exp-full-company">United States Marine Corps</span>
+            <span class="exp-full-type">Active Duty</span>
+            <span class="exp-full-location">Various</span>
+          </div>
+          <div class="exp-full-body">
+            <h3 class="exp-full-title">Lance Corporal — E3, MOS 1391 Bulk Fuel Specialist</h3>
+            <p class="exp-full-desc">
+              Installed, operated, maintained, and repaired fuel handling units and accessory equipment.
+              Tested petroleum products for quality used in amphibious assault fuel handling systems.
+              The Marine Corps built the discipline, accountability, and mission-first clarity that
+              runs underneath everything that came after.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="exp-group">
+        <p class="section-label">Education</p>
+        <h2 class="section-title">Certifications &amp; Credentials</h2>
+        <div class="edu-grid">
+          <div class="edu-card fade-up">
+            <p class="edu-card-school">Amplitude</p>
+            <p class="edu-card-degree">Amplitude Foundations — Data Management</p>
+            <p class="edu-card-date">Issued Feb 2025</p>
+          </div>
+          <div class="edu-card fade-up">
+            <p class="edu-card-school">Amplitude</p>
+            <p class="edu-card-degree">Amplitude Foundations — Experiment</p>
+            <p class="edu-card-date">Issued Feb 2025</p>
+          </div>
+          <div class="edu-card fade-up">
+            <p class="edu-card-school">edX / W3C</p>
+            <p class="edu-card-degree">HTML5 Apps and Games — W3Cx</p>
+            <p class="edu-card-date">Sep 2018</p>
+          </div>
+          <div class="edu-card fade-up">
+            <p class="edu-card-school">edX / Red Hat</p>
+            <p class="edu-card-degree">Fundamentals of Containers, Kubernetes &amp; Red Hat OpenShift</p>
+            <p class="edu-card-date">Jul – Sep 2018</p>
+          </div>
+          <div class="edu-card fade-up">
+            <p class="edu-card-school">Management &amp; Strategy Institute</p>
+            <p class="edu-card-degree">Six Sigma White Belt</p>
+            <p class="edu-card-date">Jul 2014</p>
+          </div>
+          <div class="edu-card fade-up">
+            <p class="edu-card-school">64+ Licenses &amp; Certifications</p>
+            <p class="edu-card-degree">Full list on LinkedIn</p>
+            <p class="edu-card-date"><a href="https://www.linkedin.com/in/shessvy" target="_blank" rel="noopener">linkedin.com/in/shessvy →</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-name">© 2026 Shessvy Kelly</p>
+    <nav class="footer-links">
+      <a href="https://www.linkedin.com/in/shessvy" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
