@@ -286,6 +286,50 @@ section:last-of-type { border-bottom: none; }
   letter-spacing: 0.04em;
 }
 
+/* ===== ABOUT PHOTO ===== */
+.about-photo-row {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+  filter: grayscale(20%);
+}
+
+.about-photo-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.about-photo-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1;
+}
+
+.about-photo-title {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.about-photo-location {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
 /* ===== ABOUT ===== */
 #about .about-grid {
   display: grid;
