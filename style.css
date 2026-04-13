@@ -298,10 +298,10 @@ section:last-of-type { border-bottom: none; }
 }
 
 .about-photo {
-  width: 96px;
-  height: 96px;
-  min-width: 96px;
-  min-height: 96px;
+  width: 160px;
+  height: 160px;
+  min-width: 160px;
+  min-height: 160px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
