@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing — Shessvy Kelly</title>
+  <meta name="description" content="Articles and writing by Shessvy Kelly on analytics, experimentation, sales, and technology." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .writing-hero {
+      padding: 8rem 0 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .writing-hero h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .writing-hero p {
+      color: var(--text-muted);
+      max-width: 520px;
+      font-size: 1rem;
+    }
+
+    .writing-body {
+      padding: 4rem 0;
+    }
+
+    .writing-group {
+      margin-bottom: 3.5rem;
+    }
+
+    .writing-group-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .writing-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .writing-item {
+      display: grid;
+      grid-template-columns: 90px 1fr auto;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+      text-decoration: none;
+      transition: background var(--transition);
+    }
+
+    .writing-item:last-child {
+      border-bottom: none;
+    }
+
+    .writing-item:hover .writing-item-title {
+      color: var(--accent);
+    }
+
+    .writing-item-read {
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.04em;
+      padding-top: 0.15rem;
+      white-space: nowrap;
+    }
+
+    .writing-item-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.4;
+      transition: color var(--transition);
+    }
+
+    .writing-item-arrow {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      padding-top: 0.2rem;
+      transition: color var(--transition);
+    }
+
+    .writing-item:hover .writing-item-arrow {
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      .writing-item {
+        grid-template-columns: 1fr auto;
+        gap: 0.5rem;
+      }
+
+      .writing-item-read {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .writing-item-title {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .writing-item-arrow {
+        grid-column: 2;
+        grid-row: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">SK</a>
+    <button class="nav-hamburger" aria-label="Open menu">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <button class="nav-close" id="nav-close" aria-label="Close menu">&#10005;</button>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#strengths">Strengths</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="index.html#pov">POV</a></li>
+      <li><a href="writing.html" style="color: var(--accent);">Writing</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="writing-hero">
+    <div class="container">
+      <p class="section-label">Writing</p>
+      <h1>19 articles.<br>Things worth saying.</h1>
+      <p>Written across different chapters of my career — from hosting infrastructure to experimentation to identity resolution. All of it trying to say something real, not perform having an opinion.</p>
+    </div>
+  </div>
+
+  <!-- ARTICLES -->
+  <div class="writing-body">
+    <div class="container">
+
+      <!-- ANALYTICS & EXPERIMENTATION -->
+      <div class="writing-group">
+        <p class="writing-group-label">Analytics &amp; Experimentation</p>
+        <div class="writing-list">
+
+          <a href="https://www.linkedin.com/pulse/professional-researchers-tech-world-aka-developers-shessvy-lepekelly-mrgsc" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">Dec 2024 · 5 min</span>
+            <span class="writing-item-title">The Professional Researchers of the Tech World: aka The Developers</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/why-ab-testing-secret-weapon-smarter-audience-shessvy-lepekelly-4xktc" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">May 2024 · 3 min</span>
+            <span class="writing-item-title">Why A/B Testing is a Secret Weapon for Smarter Audience Segmentation</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/key-elements-successful-web-experimentation-shessvy-lepekelly" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">6 min</span>
+            <span class="writing-item-title">Key Elements for Successful Web Experimentation</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/dual-power-testing-deep-dive-client-side-server-side-lepekelly" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">3 min</span>
+            <span class="writing-item-title">The Dual Power of Testing: A Deep Dive into Client-Side and Server-Side Experiments</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/unlock-your-websites-potential-conversion-rate-shessvy-lepekelly" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">6 min</span>
+            <span class="writing-item-title">Unlock Your Website's Potential with Conversion Rate Optimization</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- IDENTITY & MARKETING -->
+      <div class="writing-group">
+        <p class="writing-group-label">Identity &amp; Marketing</p>
+        <div class="writing-list">
+
+          <a href="https://www.linkedin.com/pulse/key-effective-marketing-identity-resolution-shessvy-lepekelly-ooojc" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">Jun 2024 · 5 min</span>
+            <span class="writing-item-title">The Key to Effective Marketing is Identity Resolution</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/why-identity-resolution-isnt-just-fancy-tech-buzzword-lepekelly-g0cuf" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">2 min</span>
+            <span class="writing-item-title">Why Identity Resolution Isn't Just a Fancy Tech Buzzword</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- SALES & STRATEGY -->
+      <div class="writing-group">
+        <p class="writing-group-label">Sales &amp; Strategy</p>
+        <div class="writing-list">
+
+          <a href="https://www.linkedin.com/pulse/4-buyers-i-new-way-look-selling-shessvy-lepekelly" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">3 min</span>
+            <span class="writing-item-title">The 4 Buyers — A New Way to Look at Selling</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/channel-sales-shessvy-lepekelly" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">2 min</span>
+            <span class="writing-item-title">Channel Sales?</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/when-5-billion-dollar-sale-bad-thing-shessvy-lepekelly" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">2 min</span>
+            <span class="writing-item-title">When a $5 Billion Dollar Sale is a Bad Thing</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- TECHNOLOGY & INFRASTRUCTURE -->
+      <div class="writing-group">
+        <p class="writing-group-label">Technology &amp; Infrastructure</p>
+        <div class="writing-list">
+
+          <a href="https://www.linkedin.com/pulse/your-wordpress-site-running-slow-shessvy-lepekelly" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">2 min</span>
+            <span class="writing-item-title">Is Your WordPress Site Running SLOW?</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/you-have-linux-heard-dirty-cow-vulnerable-its-effects-lepekelly" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">2 min</span>
+            <span class="writing-item-title">If You Have Linux and Haven't Heard About Dirty Cow, You're Vulnerable</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/monitor-report-we-resolve-restore-shessvy-lepekelly" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">2 min</span>
+            <span class="writing-item-title">They Monitor and Report — We Resolve and Restore</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/can-happen-delta-you-shessvy-lepekelly" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">2 min</span>
+            <span class="writing-item-title">If It Can Happen to Delta, It Can Happen to You</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/your-future-sure-you-ready-shessvy-lepekelly" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">2 min</span>
+            <span class="writing-item-title">Where Do I Start? Server Migrations</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/smbs-leveling-playing-field-shessvy-lepekelly" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">2 min</span>
+            <span class="writing-item-title">Are SMBs Leveling the Playing Field?</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/according-forbes-80-budgets-tied-up-routine-shessvy" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">1 min</span>
+            <span class="writing-item-title">According to Forbes, 80% of IT Budgets Are Tied Up in Routine Maintenance</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- PERSONAL -->
+      <div class="writing-group">
+        <p class="writing-group-label">Personal</p>
+        <div class="writing-list">
+
+          <a href="https://www.linkedin.com/pulse/so-whats-your-new-years-resolution-shessvy" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">1 min</span>
+            <span class="writing-item-title">So, What's Your New Year's Resolution?</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/pulse/do-you-know-what-value-work-lepekelly-it-managed-service-provider" target="_blank" rel="noopener" class="writing-item fade-up">
+            <span class="writing-item-read">1 min</span>
+            <span class="writing-item-title">Do You Know What You Value at Work?</span>
+            <span class="writing-item-arrow">↗</span>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-name">© 2026 Shessvy Kelly</p>
+    <nav class="footer-links">
+      <a href="https://www.linkedin.com/in/shessvy" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="index.html#about">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
