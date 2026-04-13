@@ -121,6 +121,25 @@ nav.scrolled { border-bottom-color: var(--border); }
   line-height: 1;
 }
 
+/* ===== BACK HOME ===== */
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 5rem 2rem 0;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  transition: color var(--transition);
+}
+
+.back-home:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
 /* ===== LAYOUT ===== */
 .container {
   max-width: var(--max-width);
