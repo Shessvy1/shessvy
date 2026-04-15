@@ -79,11 +79,15 @@ nav {
 nav.scrolled { border-bottom-color: var(--border); }
 
 .nav-logo {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-logo-img {
+  width: 36px;
+  height: 36px;
+  display: block;
 }
 
 .nav-links {
