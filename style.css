@@ -61,10 +61,7 @@ a:hover { opacity: 0.75; }
 
 /* ===== NAV ===== */
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: static;
   z-index: 100;
   padding: 1.25rem 2rem;
   display: flex;
@@ -173,7 +170,7 @@ section:last-of-type { border-bottom: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 5rem 0 0;
+  padding: 0;
   border-bottom: 1px solid var(--border);
   position: relative;
   overflow: hidden;
