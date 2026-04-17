@@ -112,6 +112,10 @@ nav.scrolled { border-bottom-color: var(--border); }
   color: var(--accent) !important;
 }
 
+.nav-close {
+  display: none;
+}
+
 .nav-hamburger {
   display: none;
   background: none;
@@ -131,7 +135,7 @@ nav.scrolled { border-bottom-color: var(--border); }
   font-size: 0.78rem;
   color: var(--text-muted);
   text-decoration: none;
-  padding: 5rem 2rem 0;
+  padding: 1.5rem 2rem 0;
   max-width: var(--max-width);
   margin: 0 auto;
   transition: color var(--transition);
