@@ -815,7 +815,7 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
-    z-index: 99;
+    z-index: 200;
   }
 
   .nav-links.open { display: flex; }
@@ -825,6 +825,7 @@ footer {
   }
 
   .nav-close {
+    display: block;
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
