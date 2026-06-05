@@ -42,6 +42,12 @@
           trackUserInteractions: true,
           trackLongTasks: true,
       });
+      console.log('%c[Datadog RUM] Initialized ✓', 'color: #632CA6; font-weight: bold;', {
+        service: 'shessvy',
+        env: 'prod',
+        version: '1.0.0',
+        sessionId: window.DD_RUM.getInternalContext()?.session_id,
+      });
     })
   </script>
 </head>
