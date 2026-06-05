@@ -20,6 +20,30 @@
   <link rel="icon" type="image/png" sizes="32x32" href="logo132px.png" />
   <link rel="apple-touch-icon" sizes="128x128" href="logo128px.png" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Datadog RUM -->
+  <script>
+    (function(h,o,u,n,d) {
+      h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+      d=o.createElement(u);d.async=1;d.src=n;d.crossOrigin=''
+      n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+    })(window,document,'script','https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js','DD_RUM')
+    window.DD_RUM.onReady(function() {
+      window.DD_RUM.init({
+          applicationId: 'a935dcbd-8c27-4593-ac9b-24583ec337fc',
+          clientToken: 'pub74c585990544770ee7f5a7a0e899f799',
+          site: 'us5.datadoghq.com',
+          service: 'shessvy',
+          env: 'prod',
+          version: '1.0.0',
+          sessionSampleRate: 100,
+          sessionReplaySampleRate: 20,
+          trackResources: true,
+          trackUserInteractions: true,
+          trackLongTasks: true,
+      });
+    })
+  </script>
 </head>
 <body>
 
